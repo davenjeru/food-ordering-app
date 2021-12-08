@@ -6,9 +6,10 @@ export type CartState = {
   totalAmount: number
 }
 
-export interface ICartContext extends CartState{
+export interface ICartContext extends CartState {
   addItem: (item: ICartItem) => void
   removeItem: (id: string) => void
+  clearCart: () => void
 }
 
 const initialCartContext: ICartContext = {
@@ -17,6 +18,8 @@ const initialCartContext: ICartContext = {
   addItem: (item) => {
   },
   removeItem: (id) => {
+  },
+  clearCart: () => {
   }
 }
 

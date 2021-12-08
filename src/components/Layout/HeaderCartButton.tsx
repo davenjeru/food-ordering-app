@@ -7,7 +7,7 @@ const HeaderCartButton: FC<{ onClick: MouseEventHandler }> = props => {
   const [buttonHighlighted, setButtonHighlighted] = useState(false)
 
   const cartCtx = useContext(CartContext)
-  const {items} = cartCtx
+  const items = cartCtx.items
   const numberOfCartItems = items.reduce((acc, item) => acc + item.amount, 0)
 
   useEffect(() => {
